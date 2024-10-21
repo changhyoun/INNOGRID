@@ -1,0 +1,108 @@
+#Home {
+  width: 100%;
+  height: auto;
+
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  #sc1{
+    height:90vh;
+  }
+  #sc4 {
+    height: 50vh;
+  }
+
+  .swiper-container1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    .swiper-wrapper {
+      width: 90%;
+      height: 100%;
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+      .swiper-container1_bt_warp{
+        width: 10%;
+        height: 100%;
+        position: relative;
+        border-left: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .swiper-button1-warp{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50%;
+          position: relative;
+          row-gap: 30px;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          flex-direction: column;
+            /* Next/Prev 버튼 스타일 */
+            .swiper-button-next1,
+            .swiper-button-prev1 {
+              transform: translateX(-50%);
+              color: #bbb; /* 아이콘 색상 */
+              cursor: pointer;
+              transition: all .3s ease;
+              &:hover{
+                color: #111;
+              }
+            }
+            .swiper-button-next1 {
+              transform: rotate(-90deg) scale(-1);
+              
+            }
+    
+            .swiper-button-prev1 {
+              transform: rotate(-90deg);
+            }
+
+              /* 원형 Progress Bar 스타일 */
+             .progress-circle-container {
+               width: 50px;
+               height: 50px;
+               position: relative;
+               .progress-circle {
+                 position: relative;
+               }
+               .time-left {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%,-50%);
+                 font-size: 12px;
+                 color: #111;
+                 font-weight: bold;
+               }
+            }
+             /* Play/Pause 버튼 스타일 */
+            .play-pause-btn {
+              color: #111;
+              padding: 5px 15px;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 0.6em;
+            }
+    
+        }
+       
+       
+    }
+
+    }
+
+   
+}

@@ -1,0 +1,74 @@
+$text-shadow-light: 1px 1px 1px rgba(0, 0, 0, 0.25);
+$text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+.Sc1_slideS{
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > img,
+  > video{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  > div{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    z-index: 5 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    
+    small{
+      font-size: 1.25rem;
+      color: #eee;
+      font-family: 'AppleNeoM';
+      margin-top: 3%;
+      text-shadow: $text-shadow-light;
+    }
+    h2{
+      font-size: 3rem;
+      color: #fff;
+      font-family: 'AppleNeoEB';
+      font-weight: 100;
+      text-shadow: $text-shadow-medium;
+    }
+    p{
+      font-size: 1.5rem;
+      font-family: 'AppleNeoR';
+      color: #eee;
+      margin-bottom: 3%;
+      text-shadow: $text-shadow-light;
+    }
+    a{
+      font-size: 1.2rem;
+      border: 1px solid #eee;
+      border-radius: 30px;
+      padding: 15px 40px;
+      color: #eee;
+      transition: all 0.5s ease;
+      font-family: 'AppleNeoM';
+      width: fit-content;
+      &:hover{
+        background-color: #eee;
+        border: 0px;
+        color: #111;
+      }
+      svg{
+        margin-left: 10px;
+      }
+    }
+  }
+ 
+
+}
