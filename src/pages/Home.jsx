@@ -5,11 +5,12 @@ import './Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faArrowRight, faPlus, } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
-import { hypersquare, se1_sw_img1, se1_sw_img2 } from '../components/Images';
+import { hypersquare, se1_sw_img1, se1_sw_img2,se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5 } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
 import { Link } from 'react-router-dom';
+
 
 const Home = () => {
   const [isPaused, setIsPaused] = useState(false); // 일시정지 상태 관리
@@ -168,11 +169,41 @@ const Home = () => {
           
         </div>
         <div className="sc2_bt">
-          
+          <div className="sc2_bt_lt">
+            <img src={se2_bt_box1} alt="se2_bt_box1" />
+            <div className="sc2_bt_lt_warp">
+              <div className="sc2_bt_lt_t">
+                <small>회사소개</small>
+                <h2>
+                  Cloud<br/>
+                  Universe<br/>
+                  Platform
+                </h2>
+              </div>
+              <div className="sc2_bt_lt_bt">
+                <p>
+                  클라우드의 모든 서비스를<br/>
+                  맞춤형으로 제공하는 클라우드 생태계
+                </p>
+                <Link to="https://www.innogrid.com/pr/news" target='_blank'>
+                  더보기 <FontAwesomeIcon icon={faPlus} />
+                </Link>
+              </div>
+              
+            </div>
+          </div>
+          <div className="sc2_bt_rt">
+            <div className="sc2_bt_rt_t">
+
+            </div>
+            <div className="sc2_bt_rt_bt">
+              
+            </div>
+          </div>
         </div>
       </div>
       <div className="section" id="sc3">
-        <h1>Section 3</h1>
+        
       </div>
       <div className="section" id="sc4">
         <h1>Section 4</h1>

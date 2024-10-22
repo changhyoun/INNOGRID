@@ -90,6 +90,119 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
       width: 100%;
       height: 85%;
       border: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > div:nth-of-type(1){
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+        transition: all .3s ease;
+        position: relative;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        }
+        > div{
+          width: 90%;
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          z-index: 1;
+          color: white;
+          > div:nth-of-type(1){
+            height: 60%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            small{
+              font-family: 'AppleNeoM';
+              font-size: 1.5rem;
+            }
+            h2{
+              font-weight: 500;
+              font-family: 'AppleNeoEB';
+              font-size: 3.5rem;
+            }
+          }
+          > div:nth-of-type(2){
+            height: 30%;
+            width: 100%;
+            
+            p{
+              font-family: 'AppleNeoL';
+              font-size: 1.5rem;
+            }
+            a{
+              opacity: 0;
+              transform: translateY(100%);
+              transition: opacity 0.3s ease, transform 0.8s ease; 
+              position: absolute;
+              font-size: 1.2rem;
+              border-radius: 30px;
+              padding: 15px 40px;
+              color: white;
+              transition: all 0.5s ease;
+              font-family: 'AppleNeoM';
+              width: fit-content;
+              margin: 0 auto;
+              border: 2px solid white;
+              box-shadow: $text-shadow-light;
+              transition: all .3s ease;
+              margin-top: 20px;
+              &:hover{
+                border: none;
+                background-color: white;
+                color: #111;
+                svg{
+                  transition: all .3s ease;
+                  transform: rotate(90deg);
+                }
+              }
+              svg{
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      // hover 시 첫 번째 div의 width 변경
+      > div:nth-of-type(1):hover {
+        width: 30%;
+      }
+      > div:nth-of-type(1):hover > div > div:nth-of-type(2) a{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    
+      // hover 시 두 번째 div의 width 변경
+      > div:nth-of-type(1):hover ~ div:nth-of-type(2) {
+        width: calc(70% - 20px);
+      }
+      > div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.3s all ease ease;
+        width: calc(75% - 20px);
+        height: 100%;
+        border: 1px solid red;
+        > div{
+          width: 100%;
+          height: calc(50% - 20px);
+          border: 1px solid red;
+        }
+      }
     }
   }
   #sc4 {
