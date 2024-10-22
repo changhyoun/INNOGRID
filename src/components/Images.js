@@ -7,6 +7,15 @@ export {se1_sw_img1}
 // 섹션1 스와이퍼 이미지2
 import se1_sw_img2 from "../assets/se1_sw_img2.webp"
 export {se1_sw_img2}
+// 섹션1 스와이퍼5 이미지
+import se1_sw5_img1 from "../assets/se1_sw5_img1.webp"
+export {se1_sw5_img1}
+import se1_sw5_img2 from "../assets/se1_sw5_img2.webp"
+export {se1_sw5_img2}
+import se1_sw5_img3 from "../assets/se1_sw5_img3.webp"
+export {se1_sw5_img3}
+import se1_sw5_img4 from "../assets/se1_sw5_img4.webp"
+export {se1_sw5_img4}
 // 섹션1 스와이퍼 비디오3
 import hypersquare from "../assets/hypersquare.mp4"
 export {hypersquare}

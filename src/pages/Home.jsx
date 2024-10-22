@@ -3,10 +3,13 @@ import './Home.scss';
 
 // FontAwesome 관련 import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faArrowRight, faPlus, } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
 import { hypersquare, se1_sw_img1, se1_sw_img2 } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
+import Sc1_slide5 from '../components/Sc1_slide5';
+import Sc2_slide_box from '../components/Sc2_slide_box';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [isPaused, setIsPaused] = useState(false); // 일시정지 상태 관리
@@ -39,7 +42,20 @@ const Home = () => {
         },
       },
     });
+
+    swiperRef.current = new window.Swiper('.swiper-container3', {
+      direction: 'vertical',
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        
+      },
+    });
+
   }, []);
+
+  
 
   // 재생/정지 버튼 클릭 핸들러
   const handlePlayPause = () => {
@@ -67,6 +83,9 @@ const Home = () => {
             </div>
             <div className="swiper-slide">
               <Sc1_slide4/>
+            </div>
+            <div className="swiper-slide">
+              <Sc1_slide5/>
             </div>
           </div>
           <div className="swiper-container1_bt_warp">
@@ -98,6 +117,7 @@ const Home = () => {
                 </svg>
                 <div className="time-left">{timeLeft}s</div>
               </div>
+             {/* Play/Pause 버튼 */}
               <div className="play-pause-btn" onClick={handlePlayPause}>
               {isPaused ? <FontAwesomeIcon icon={faPlay} /> : <FontAwesomeIcon icon={faPause} />}
               </div>
@@ -108,7 +128,6 @@ const Home = () => {
               </div>
             </div>
 
-             {/* Play/Pause 버튼 */}
            
           </div>
          
@@ -117,7 +136,40 @@ const Home = () => {
         
       </div>
       <div className="section" id="sc2">
-        <h1>Section 2</h1>
+        <div className="sc2_t">
+          <div className="sc2_t_warp">
+            <div className="sc2_t_lt">
+              <div className="swiper-container3">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
+                    <Link to={"https://www.innogrid.com/pr/news/detail?uuid=c910b358-fc46-4ed2-baf5-787f360ebd24"} target='_blank'>
+                      <Sc2_slide_box Sc2_slide_box_small={'보도자료'} Sc2_slide_box_h3={'이노그리드, 국립공원공단의 디지털 전환을 위한 첫걸음 ‘정보시스템 클라우드 전환 컨설팅’ 완수'} Sc2_slide_box_p={'2024-10-21'}/>
+                    </Link>
+                  </div>
+                  <div className="swiper-slide">
+                    <Link to={"https://www.innogrid.com/pr/news/detail?uuid=7ee09888-7025-4947-930a-ce4adf8f7a07"} target='_blank' >
+                      <Sc2_slide_box Sc2_slide_box_small={'보도자료'} Sc2_slide_box_h3={'이노그리드, 제8회 대한민국 디지털 미래혁신대상서 하이브리드 기술력 인정받아 ‘KISTI 원장상’ 수상'} Sc2_slide_box_p={'2024-10-07'}/>
+                    </Link>
+                  </div>
+                  <div className="swiper-slide">
+                    <Link to={"https://www.innogrid.com/pr/news/detail?uuid=99e8a87d-5b7e-44b8-917b-711f20961494"} target='_blank'>
+                      <Sc2_slide_box Sc2_slide_box_small={'기획자료'} Sc2_slide_box_h3={'이노그리드, 공공 수주 확대로 분위기 반전 꾀한다'} Sc2_slide_box_p={'2024-10-06'}/>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sc2_t_rt">
+              <Link to="https://www.innogrid.com/pr/news" target='_blank'>
+                더보기 <FontAwesomeIcon icon={faPlus} />
+              </Link>
+            </div>
+          </div>
+          
+        </div>
+        <div className="sc2_bt">
+          
+        </div>
       </div>
       <div className="section" id="sc3">
         <h1>Section 3</h1>

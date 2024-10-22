@@ -1,7 +1,10 @@
+$text-shadow-light: 1px 1px 1px rgba(0, 0, 0, 0.25);
+$text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+
 #Home {
   width: 100%;
   height: auto;
-
   .section {
     height: 100vh;
     display: flex;
@@ -11,6 +14,83 @@
   }
   #sc1{
     height:90vh;
+    margin-bottom: 40px;
+  }
+  #sc2{
+    height:110vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > div:nth-of-type(1){
+      width: 100%;
+      height: 12%;
+      background-color: #eee;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $text-shadow-medium;
+      > div{
+        width: 90%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > div:nth-of-type(1){
+          width: 75%;
+          height: 100%;
+          .swiper-container3{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .swiper-wrapper{
+              width: 100%;
+              height: 100%;
+              .swiper-slide{
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        > div:nth-of-type(2){
+          width: 15%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a{
+            font-size: 1.2rem;
+            border-radius: 30px;
+            padding: 15px 40px;
+            color: #2a2a2a;
+            transition: all 0.5s ease;
+            font-family: 'AppleNeoM';
+            width: fit-content;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: $text-shadow-light;
+            transition: all .3s ease;
+            &:hover{
+              svg{
+                transition: all .3s ease;
+                transform: rotate(90deg);
+              }
+            }
+            svg{
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      
+    }
+    > div:nth-of-type(2){
+      width: 100%;
+      height: 85%;
+      border: 1px solid red;
+    }
   }
   #sc4 {
     height: 50vh;
