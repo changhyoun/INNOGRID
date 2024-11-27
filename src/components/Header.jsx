@@ -41,8 +41,8 @@ const Header = () => {
             <Menu/>
         </div>
         <div className="Header_rt">
-            <Link>Edu Square</Link>
-            <Link>채용 <FontAwesomeIcon icon={faArrowTrendUp} /></Link>
+            <Link to={`https://www.innogrid.com/hypersquare/edusquare`}>Edu Square</Link>
+            <Link to={`https://www.innogrid.com/hr`}>채용 <FontAwesomeIcon icon={faArrowTrendUp} /></Link>
             <Link>
               <FontAwesomeIcon className="ham" icon={faBars} />
             </Link>

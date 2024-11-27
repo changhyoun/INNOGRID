@@ -30,14 +30,16 @@ export {Sc1_slide4_gif3}
 import Sc1_slide4_gif4 from "../assets/gri.gif"
 export {Sc1_slide4_gif4}
 
-// 섹션1 스와이퍼 gif 캐릭터
+// 섹션 2 bt 이미지
 import se2_bt_box1 from "../assets/se2_bt_box1.webp"
 export {se2_bt_box1}
-import se2_bt_box2 from "../assets/se2_bt_box1.webp"
+import se2_bt_box2 from "../assets/se2_bt_box2.webp"
 export {se2_bt_box2}
 import se2_bt_box3 from "../assets/se2_bt_box3.webp"
 export {se2_bt_box3}
 import se2_bt_box5 from "../assets/se2_bt_box5.webp"
 export {se2_bt_box5}
+
+
 
 

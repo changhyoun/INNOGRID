@@ -18,7 +18,6 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
   }
   #sc2{
     height:110vh;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,6 +59,7 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
           display: flex;
           align-items: center;
           justify-content: center;
+          
           a{
             font-size: 1.2rem;
             border-radius: 30px;
@@ -89,19 +89,20 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
     > div:nth-of-type(2){
       width: 100%;
       height: 85%;
-      border: 1px solid red;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      
       > div:nth-of-type(1){
         width: 25%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid red;
         transition: all .3s ease;
         position: relative;
+        border-radius: 20px;
+        overflow: hidden;
         img{
           position: absolute;
           top: 0;
@@ -125,13 +126,13 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
             flex-direction: column;
             gap: 20px;
             small{
-              font-family: 'AppleNeoM';
+              font-family: 'AppleNeoB';
               font-size: 1.5rem;
             }
             h2{
               font-weight: 500;
               font-family: 'AppleNeoEB';
-              font-size: 3.5rem;
+              font-size: 4rem;
             }
           }
           > div:nth-of-type(2){
@@ -139,7 +140,7 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
             width: 100%;
             
             p{
-              font-family: 'AppleNeoL';
+              font-family: 'AppleNeoM';
               font-size: 1.5rem;
             }
             a{
@@ -188,19 +189,232 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
       > div:nth-of-type(1):hover ~ div:nth-of-type(2) {
         width: calc(70% - 20px);
       }
+      
       > div:nth-of-type(2){
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        transition: 0.3s all ease ease;
+        transition: 0.3s all ease;
         width: calc(75% - 20px);
         height: 100%;
-        border: 1px solid red;
         > div{
           width: 100%;
           height: calc(50% - 20px);
-          border: 1px solid red;
+          display: flex;
+          justify-content: space-between;
+          &:nth-of-type(2){
+            flex-direction: row-reverse;
+          }
+          & > div:nth-of-type(1){
+            width: calc(65% - 10px);
+            height: 100%;
+            background-color: #0042ff;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s all ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover > div > div:nth-of-type(2) a{
+              opacity: 1;
+              transform: translateY(0%);
+            }
+            &:hover{
+              background-color: #003be2;
+            }
+            > img{
+              height: 70%;
+              position: absolute;
+              top: 0;
+              right: 10%;
+            }
+            > div{
+              width: 90%;
+              height: 90%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              z-index: 1;
+              color: white;
+              > div:nth-of-type(1){
+                height: 50%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                small{
+                  font-family: 'AppleNeoB';
+                  font-size: 1.5rem;
+                }
+                h2{
+                  font-weight: 500;
+                  font-family: 'AppleNeoEB';
+                  font-size: 5rem;
+                }
+              }
+              > div:nth-of-type(2){
+                height: 40%;
+                width: 100%;
+                p{
+                  font-family: 'AppleNeoM';
+                  font-size: 1.5rem;
+                }
+                a{
+                  opacity: 0;
+                  transform: translateY(100%);
+                  transition: opacity 0.3s ease, transform 0.8s ease; 
+                  position: absolute;
+                  font-size: 1.2rem;
+                  border-radius: 30px;
+                  padding: 15px 40px;
+                  color: white;
+                  transition: all 0.5s ease;
+                  font-family: 'AppleNeoM';
+                  width: fit-content;
+                  margin: 0 auto;
+                  border: 2px solid white;
+                  box-shadow: $text-shadow-light;
+                  transition: all .3s ease;
+                  margin-top: 20px;
+                  &:hover{
+                    border: none;
+                    background-color: white;
+                    color: #111;
+                    svg{
+                      transition: all .3s ease;
+                      transform: rotate(90deg);
+                    }
+                  }
+                  svg{
+                    margin-left: 10px;
+                  }
+                }
+              }
+            }
+          }
+       
+          .sc2_bt_rt_t_lt.hovered{
+            width: calc(55% - 10px);
+          }
+          .sc2_bt_rt_bt_lt.hovered{
+            width: calc(55% - 10px);
+          }
+          & > div:nth-of-type(2){
+            transition: 0.3s all ease;
+            width: calc(35% - 10px);
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f1f3f8;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+              width: calc(45% - 10px);
+            }
+            &:hover > img{
+              transform: translateY(5px);
+              transition: all .3s ease-in-out;
+            }
+            > img{
+              height: 70%;
+              position: absolute;
+              bottom: 0;
+              right: 0%;
+            }
+            > div{
+              width: 90%;
+              height: 90%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              z-index: 1;
+              color: #222;
+              &:hover{
+                a{
+                  opacity: 1 !important;
+                  transform: translateY(-150%) !important;
+                }
+              } 
+              > div:nth-of-type(1){
+                height: 50%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                small{
+                  font-family: 'AppleNeoB';
+                  font-size: 1.5rem;
+                }
+                h2{
+                  font-weight: 500;
+                  font-family: 'AppleNeoEB';
+                  font-size: 5rem;
+                }
+              }
+              > div:nth-of-type(2){
+                height: 40%;
+                width: 100%;
+                display: flex;
+                align-items: end;
+                p{
+                  font-family: 'AppleNeoM';
+                  font-size: 1.5rem;
+                }
+                a{
+                  opacity: 0;
+                  transform: translateY(0%);
+                  transition: opacity 0.3s ease, transform 0.8s ease; 
+                  position: absolute;
+                  font-size: 1.2rem;
+                  border-radius: 30px;
+                  padding: 15px 40px;
+                  color: #222;
+                  transition: all 0.5s ease;
+                  font-family: 'AppleNeoM';
+                  width: fit-content;
+                  margin: 0 auto;
+                  background-color: white;
+                  box-shadow: $text-shadow-light;
+                  transition: all .3s ease;
+                  margin-top: 20px;
+                  &:hover{
+                    border: none;
+                    background-color: white;
+                    color: #111;
+                    svg{
+                      transition: all .3s ease;
+                      transform: rotate(90deg);
+                    }
+                  }
+                  svg{
+                    margin-left: 10px;
+                  }
+                }
+              }
+            }
+          }
+          // 섹션 2 연혁 박스
+          &:nth-of-type(2) > div:nth-of-type(1){
+            background-color: #c9e7ff;
+            img{
+              position:absolute;
+              top: auto;
+              bottom: 0;
+            }
+            > div{
+              color: #222;
+              a{
+                background-color: white;
+                color: #222 !important;
+              }
+            }
+          }
         }
       }
     }

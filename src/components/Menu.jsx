@@ -123,33 +123,33 @@ const Menu = () => {
          onMouseEnter={handleMouseEnter1}
          onMouseLeave={handleMouseLeave1}
          >
-          <Link to="https://codesandbox.io/features">회사소개</Link>
+          <Link to="https://www.innogrid.com/innogrid/ceo">회사소개</Link>
           <div className="submenu-content" ref={submenuRef1}>
-            <Link to="https://codesandbox.io/cloud-development-environments">
+            <Link to="https://www.innogrid.com/innogrid/ceo">
               <SubMenuItem
                   icon={faBoxesPacking}
                   title="CEO 인사말"
                 />
             </Link>
-            <Link to="https://codesandbox.io/improve-code-reviews">
+            <Link to="https://www.innogrid.com/innogrid/vision">
               <SubMenuItem
                   icon={faMessage}
                   title="비전ㆍ미션"
                 />
             </Link>
-            <Link to="https://codesandbox.io/code-in-sandboxes">
+            <Link to="https://www.innogrid.com/innogrid/cloudiverse">
               <SubMenuItem
                   icon={faFileCode}
                   title="CLOUDIVERSE"
                 />
             </Link>
-            <Link to={"https://codesandbox.io/learn-and-experiment"}>
+            <Link to={"https://www.innogrid.com/innogrid/history"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="연혁"
                 />
             </Link>
-            <Link to={"https://codesandbox.io/learn-and-experiment"}>
+            <Link to={"https://www.innogrid.com/innogrid/rnd"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="R&D"
@@ -164,37 +164,37 @@ const Menu = () => {
         >
           <Link to="https://codesandbox.io/use-cases">제품소개</Link>
           <div className="submenu-content" ref={submenuRef2}>
-            <Link to="https://codesandbox.io/cloud-development-environments">
+            <Link to="https://www.innogrid.com/product/cloudit">
               <SubMenuItem
                   icon={faBoxesPacking}
                   title="클라우드잇"
                 />
             </Link>
-            <Link to="https://codesandbox.io/improve-code-reviews">
+            <Link to="https://www.innogrid.com/product/openstackit">
               <SubMenuItem
                   icon={faMessage}
                   title="오픈스택잇"
                 />
             </Link>
-            <Link to="https://codesandbox.io/code-in-sandboxes">
+            <Link to="https://www.innogrid.com/product/tabcloudit">
               <SubMenuItem
                   icon={faFileCode}
                   title="탭클라우드잇"
                 />
             </Link>
-            <Link to={"https://codesandbox.io/learn-and-experiment"}>
+            <Link to={"https://www.innogrid.com/product/secloudit"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="SE클라우드잇"
                 />
             </Link>
-            <Link to={"https://codesandbox.io/learn-and-experiment"}>
+            <Link to={"https://www.innogrid.com/product/saida"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="사이-다"
                 />
             </Link>
-            <Link to={"https://codesandbox.io/learn-and-experiment"}>
+            <Link to={"https://www.innogrid.com/product/optimusit"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="옵티머스잇"
@@ -208,21 +208,21 @@ const Menu = () => {
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
         >
-          <Link to="https://codesandbox.io/resources">고객사례</Link>
+          <Link to="https://www.innogrid.com/case/public">고객사례</Link>
           <div className="submenu-content" ref={submenuRef3}>
-            <Link to={"https://codesandbox.io/templates"}>
+            <Link to={"https://www.innogrid.com/case/public"}>
               <SubMenuItem
                   icon={faSwatchbook}
                   title="공공 · 정부"
                 />
             </Link>
-            <Link to="https://codesandbox.io/blog">
+            <Link to="https://www.innogrid.com/case/study">
               <SubMenuItem
                   icon={faBookOpenReader}
                   title="교육 · 연구"
                 />
             </Link>
-            <Link to="https://login.circle.so/sign_in?request_host=www.codesandbox.community#email">
+            <Link to="https://www.innogrid.com/case/enterprise">
               <SubMenuItem
                   icon={faUserGroup}
                   title="엔터프라이즈"
@@ -235,15 +235,15 @@ const Menu = () => {
          onMouseEnter={handleMouseEnter4}
          onMouseLeave={handleMouseLeave4}
         >
-          <Link target='_blank' to="https://codesandbox.io/docs/learn">파트너</Link>
+          <Link target='_blank' to="https://www.innogrid.com/partner/program">파트너</Link>
           <div className="submenu-content" ref={submenuRef4}>
-            <Link to={"https://codesandbox.io/templates"}>
+            <Link to={"https://www.innogrid.com/partner/program"}>
               <SubMenuItem
                   icon={faSwatchbook}
                   title="프로그램 소개"
                 />
             </Link>
-            <Link to="https://codesandbox.io/blog">
+            <Link to="https://www.innogrid.com/partner/list">
               <SubMenuItem
                   icon={faBookOpenReader}
                   title="파트너 리스트"
@@ -256,33 +256,33 @@ const Menu = () => {
             onMouseEnter={handleMouseEnter5}
             onMouseLeave={handleMouseLeave5}
         >
-          <Link to="https://codesandbox.io/support">홍보센터</Link>
+          <Link to="https://www.innogrid.com/pr/news">홍보센터</Link>
           <div className="submenu-content" ref={submenuRef5}>
-            <Link to={"https://codesandbox.io/templates"}>
+            <Link to={"https://www.innogrid.com/pr/news"}>
               <SubMenuItem
                   icon={faSwatchbook}
                   title="뉴스룸"
                 />
             </Link>
-            <Link to="https://codesandbox.io/blog">
+            <Link to="https://www.innogrid.com/pr/ci">
               <SubMenuItem
                   icon={faBookOpenReader}
                   title="CI / BI"
                 />
             </Link>
-            <Link to="https://login.circle.so/sign_in?request_host=www.codesandbox.community#email">
+            <Link to="https://www.innogrid.com/pr/character">
               <SubMenuItem
                   icon={faUserGroup}
                   title="캐릭터"
                 />
             </Link>
-            <Link to="https://codesandbox.io/changelog">
+            <Link to="https://www.innogrid.com/pr/event">
               <SubMenuItem
                   icon={faFileCircleCheck}
                   title="행사"
                 />
             </Link>
-            <Link to="https://codesandbox.io/changelog">
+            <Link to="https://www.innogrid.com/pr/blog">
               <SubMenuItem
                   icon={faFileCircleCheck}
                   title="블로그"
@@ -291,7 +291,7 @@ const Menu = () => {
           </div>
         </li>
         <li>
-          <Link to="https://codesandbox.io/pricing">하이퍼스퀘어</Link>
+          <Link to="https://www.innogrid.com/hypersquare">하이퍼스퀘어</Link>
         </li>
       </ul>
     </div>
