@@ -5,11 +5,16 @@ import './Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
-import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5 } from '../components/Images';
+import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
 import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 const Home = () => {
   const [isPaused, setIsPaused] = useState(false); // 일시정지 상태 관리
@@ -19,6 +24,9 @@ const Home = () => {
   const swiperRef3 = useRef(null); // Swiper 3 인스턴스 참조
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
+  const textRef1 = useRef(null);
+  const textRef2 = useRef(null);
+  const textRef3 = useRef(null);
 
   useEffect(() => {
     // Swiper 1 초기화
@@ -54,6 +62,53 @@ const Home = () => {
         disableOnInteraction: false,
       },
     });
+    // GSAP ScrollTrigger 애니메이션 설정
+    gsap.fromTo(
+      textRef1.current,
+      { opacity: 0, textContent: '' }, // 초기 상태
+      {
+        opacity: 1,
+        duration: 2,
+        text: 'BEYOND THE<br>CLOUD UNIVERSE PLATFORM', // <br>로 줄바꿈 처리
+        scrollTrigger: {
+          trigger: '#sc2',
+          start: 'bottom bottom', // 트리거 시작 지점
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    gsap.fromTo(
+      textRef2.current,
+      { opacity: 0, textContent: '' }, // 초기 상태
+      {
+        opacity: 1,
+        duration: 2,
+        text: 'INNOGRID<br>CLOUDIVERSE',
+        scrollTrigger: {
+          trigger: '#sc2',
+          start: 'bottom bottom',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    gsap.fromTo(
+      textRef3.current,
+      { opacity: 0, textContent: '' }, // 초기 상태
+      {
+        opacity: 1,
+        duration: 2,
+        text: '<span>커스텀 클라우드 파트너로서</span><br>맞춤형 클라우드 방안을 제시합니다.',
+        scrollTrigger: {
+          trigger: '#sc2',
+          start: 'bottom bottom',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+    
+          
   }, []);
 
   // 재생/정지 버튼 클릭 핸들러
@@ -287,6 +342,20 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="section" id="sc3">
+        <div className="sc3_warp">
+          <h2 ref={textRef1}>
+            {/* 애니메이션으로 텍스트 */}
+          </h2>
+          <h2 ref={textRef2}>
+            {/* 애니메이션으로 텍스트 */}
+          </h2>
+          <p ref={textRef3}></p>
+          <video src={se3_vi} muted autoPlay loop></video>
+        </div>
+      </div>
+      <div className="section" id="sc4">
       </div>
     </div>
   );

@@ -419,8 +419,63 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
       }
     }
   }
+  #sc3 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    > div{
+      width: 90%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2{
+        font-size: 5rem;
+        font-family: 'AppleNeoB';
+        font-weight: medium;
+        letter-spacing: 0.25rem;
+        white-space: pre-line;
+        position: relative;
+        z-index: 2;
+      }
+      p{
+        font-size: 2.3rem;
+        font-family: 'AppleNeoB';
+        font-weight: medium;
+        white-space: pre-line;
+        position: relative;
+        z-index: 2;
+        margin-top: 3vh;
+        span{
+          color: #0042ff;
+        }
+      }
+      > h2:nth-of-type(1){
+        color: #ddd;
+      }
+      video{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 55%;
+        max-height: 410px;
+        z-index: 1 !important;
+      }
+    }
+  }
   #sc4 {
-    height: 50vh;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .swiper-container1 {

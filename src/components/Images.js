@@ -40,6 +40,12 @@ export {se2_bt_box3}
 import se2_bt_box5 from "../assets/se2_bt_box5.webp"
 export {se2_bt_box5}
 
+// 섹션3 원 비디오
+import se3_vi from "../assets/se3_vi.mp4"
+export {se3_vi}
+
+
+
 
 
 
