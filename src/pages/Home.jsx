@@ -5,7 +5,7 @@ import './Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
-import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi } from '../components/Images';
+import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5 } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
@@ -356,6 +356,130 @@ const Home = () => {
         </div>
       </div>
       <div className="section" id="sc4">
+        <div className="sc4_warp">
+          <div className="sc4_t">
+            <h3>GROUP COMANY</h3>
+          </div>
+          <div className="sc4_bt">
+            <ul className='sc4_bt_u'>
+              <li className='sc4_bt_l'>
+                <div>
+                  <img src={bg_ev} alt="bg_ev" />
+                  <div>
+                    <div>
+                      <img src={se4_lo1} alt="se4_lo1" />
+                    </div>
+                    <div>
+                      <em>
+                        (주)에티버스
+                      </em>
+                      <p>
+                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
+                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
+                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
+                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
+                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
+                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className='sc4_bt_l'>
+                <div>
+                  <img src={bg_eb} alt="bg_eb" />
+                  <div>
+                    <div>
+                      <img src={se4_lo1} alt="se4_lo1" />
+                    </div>
+                    <div>
+                      <em>
+                        (주)에티버스
+                      </em>
+                      <p>
+                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
+                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
+                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
+                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
+                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
+                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className='sc4_bt_l'>
+                <div>
+                  <img src={bg_ee} alt="bg_ee" />
+                  <div>
+                    <div>
+                      <img src={se4_lo1} alt="se4_lo1" />
+                    </div>
+                    <div>
+                      <em>
+                        (주)에티버스
+                      </em>
+                      <p>
+                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
+                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
+                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
+                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
+                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
+                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className='sc4_bt_l'>
+                <div>
+                  <img src={bg_ep} alt="bg_ep" />
+                  <div>
+                    <div>
+                      <img src={se4_lo1} alt="se4_lo1" />
+                    </div>
+                    <div>
+                      <em>
+                        (주)에티버스
+                      </em>
+                      <p>
+                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
+                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
+                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
+                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
+                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
+                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className='sc4_bt_l'>
+                <div>
+                  <img src={bg_es} alt="bg_es" />
+                  <div>
+                    <div>
+                      <img src={se4_lo1} alt="se4_lo1" />
+                    </div>
+                    <div>
+                      <em>
+                        (주)에티버스
+                      </em>
+                      <p>
+                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
+                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
+                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
+                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
+                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
+                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

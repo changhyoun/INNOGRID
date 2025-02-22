@@ -467,7 +467,7 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
     }
   }
   #sc4 {
-    height: 150vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,7 +476,119 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    
+    > div {
+      width: 90%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid red;
+  
+      > div:nth-of-type(1) {
+        width: 100%;
+        height: 15%;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        h3 {
+          color: #2a2a2a;
+          font-size: 3rem;
+        }
+      }
+  
+      > div:nth-of-type(2) {
+        width: 100%;
+        height: 80%;
+        border: 1px solid red;
+  
+        > ul {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
+          gap: 20px; /* 갭 유지 */
+          transition: all 0.3s ease-in-out;
+  
+          > li {
+            flex: 1; /* 기본적으로 flex 1 */
+            border: 1px solid red;
+            transition: flex 0.3s ease-in-out;
+  
+            > div {
+              display: flex;
+              position: relative;
+              flex: 1;
+              overflow: hidden;
+              width: 100%;
+              height: 100%;
+              border-radius: 20px;
+              transition: transform 0.3s ease-in-out;
+              align-items: center;
+              justify-content: center;
+              > img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                color: transparent;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+              }
+              > div{
+               width: 80%; 
+               height: 80%;
+               border: 1px solid red;
+               z-index: 100;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               > img{
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 50%;
+               }
+               em{
+                font-size: 1.5rem;
+                font-style: normal;
+                color: #fff;
+                font-weight: bold;
+               }
+               p{
+                font-size: 0.9rem;
+                color: #fff;
+                margin: 3% 0;
+               }
+              }
+            }
+          }
+  
+          /* 호버 효과 */
+          li:hover {
+            flex: 3; /* 호버한 li 크기 증가 */
+            transition: all 0.3s ease;
+          }
+
+          /* 호버 효과 */
+          li:hover > div > div > img {
+            transform: rotate(0deg);
+            transition: all 0.3s ease;
+          }
+  
+          /* 나머지 li 자동 조정 */
+          ul:hover li:not(:hover) {
+            flex: 0.7; /* 다른 li들이 자동으로 줄어들어 간격 유지 */
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
   }
+  
 
   .swiper-container1 {
     width: 100%;

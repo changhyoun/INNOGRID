@@ -44,6 +44,33 @@ export {se2_bt_box5}
 import se3_vi from "../assets/se3_vi.mp4"
 export {se3_vi}
 
+// 섹션4 이미지들 
+import bg_ev from "../assets/bg_ev.webp"
+export {bg_ev}
+import bg_eb from "../assets/bg_eb.webp"
+export {bg_eb}
+import bg_ee from "../assets/bg_ee.webp"
+export {bg_ee}
+import bg_ep from "../assets/bg_ep.webp"
+export {bg_ep}
+import bg_es from "../assets/bg_es.webp"
+export {bg_es}
+
+// 섹션4 로고 svg 
+import se4_lo1 from "../assets/svgexport-10.svg"
+export {se4_lo1}
+import se4_lo2 from "../assets/svgexport-11.svg"
+export {se4_lo2}
+import se4_lo3 from "../assets/svgexport-12.svg"
+export {se4_lo3}
+import se4_lo4 from "../assets/svgexport-13.svg"
+export {se4_lo4}
+import se4_lo5 from "../assets/svgexport-14.svg"
+export {se4_lo5}
+
+
+
+
 
 
 
