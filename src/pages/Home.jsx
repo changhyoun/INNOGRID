@@ -1,11 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import './Home.scss';
-
 // FontAwesome 관련 import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
-import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5 } from '../components/Images';
+import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5,plus_btn } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
@@ -27,6 +26,7 @@ const Home = () => {
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
   const textRef3 = useRef(null);
+  
 
   useEffect(() => {
     // Swiper 1 초기화
@@ -367,6 +367,7 @@ const Home = () => {
                   <img src={bg_ev} alt="bg_ev" />
                   <div>
                     <div>
+                      <img src={plus_btn} alt="plus_btn" className='plus_btn' />
                       <img src={se4_lo1} alt="se4_lo1" />
                     </div>
                     <div>
@@ -381,6 +382,16 @@ const Home = () => {
                         갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
                         고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
                       </p>
+                      <div className='link_ou'>
+                        <Link to="https://etevers.com/main/main.html" target="_blank">
+                            <span>
+                              에티버스 홈페이지
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -390,20 +401,33 @@ const Home = () => {
                   <img src={bg_eb} alt="bg_eb" />
                   <div>
                     <div>
-                      <img src={se4_lo1} alt="se4_lo1" />
+                      <img src={plus_btn} alt="plus_btn" className='plus_btn' />
+                      <img src={se4_lo2} alt="se4_lo1" />
                     </div>
                     <div>
                       <em>
-                        (주)에티버스
+                        (주)이테크시스템
                       </em>
                       <p>
-                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
-                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
-                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
-                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
-                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
-                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      ㈜이테크시스템은 글로벌 솔루션 업체들과 이테크시스템의<br/>
+                      우수한 기술력과 인재를 기반으로 폭넓은<br/>
+                      고객가치 창출을 위해 노력하고 있습니다.<br/>
+                      IT 기본 인프라 구축, 가상화를 통한 정보데이터 Managing,<br/>
+                      백업 인프라 통합관리, Network 컴퓨팅의 관리, Cloud 기반의<br/>
+                      Calling System 및 통합 솔루션 제공 등 기업의 다양한 IT 핵심 솔루션을<br/>
+                      제공하고 있으며 끊임없는 변화와 혁신을 바탕으로 최고의 기술력을 지닌<br/>
+                      IT 솔루션 전문 기업으로 지속 성장을 도모하고 있습니다
                       </p>
+                      <div className='link_ou'>
+                        <Link to="https://etechsystem.co.kr/main/main.html" target="_blank">
+                            <span>
+                            이테크시스템 홈페이지
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -413,20 +437,41 @@ const Home = () => {
                   <img src={bg_ee} alt="bg_ee" />
                   <div>
                     <div>
-                      <img src={se4_lo1} alt="se4_lo1" />
+                      <img src={plus_btn} alt="plus_btn" className='plus_btn' />
+                      <img src={se4_lo3} alt="se4_lo1" />
                     </div>
                     <div>
                       <em>
-                        (주)에티버스
+                        (주)에티버스 이비티
                       </em>
                       <p>
-                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
-                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
-                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
-                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
-                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
-                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      ㈜에티버스 이비티는 세계 최고의 소프트웨어, 하드웨어 및 네트워크 제조사와 전략적<br/>
+                      제휴관계를 형성하고 있으며 고객에 대한 정확한 이해를 바탕으로 제품 및 서비스의<br/>
+                      다양한 Usage를 파악하고 그에 적합한 솔루션을 제공합니다.<br/>
+                      끊임없는 기술 혁신으로 에티버스 이비티의 사업구조를 더욱 고도화하고<br/>
+                      이를 통해 경쟁력을 확보하고 있으며 고객 중심의 비즈니스를 통해 IT 솔루션 기업으로 도약하고자 합니다.<br/><br/>
+
+                      ㈜에티버스 이비티에서는 PC, 주변기기 및 전자제품, 클라우드 서비스 등 디지털 제품을<br/>
+                      합리적인 가격으로 공급하는 온라인쇼핑몰 시소몰도 운영하고 있습니다.
                       </p>
+                      <div className='link_ou'>
+                        <Link to="https://eteversebt.com/main/main.html" target="_blank">
+                            <span>
+                              에티버스 이비티 홈페이지
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                        <Link to="https://www.seesawmall.com/" target="_blank">
+                            <span>
+                              시소몰 홈페이지
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -436,20 +481,30 @@ const Home = () => {
                   <img src={bg_ep} alt="bg_ep" />
                   <div>
                     <div>
-                      <img src={se4_lo1} alt="se4_lo1" />
+                      <img src={plus_btn} alt="plus_btn" className='plus_btn' />
+                      <img src={se4_lo4} alt="se4_lo1" />
                     </div>
                     <div>
                       <em>
-                        (주)에티버스
+                        (주)에티버스 이피에이
                       </em>
                       <p>
-                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
-                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
-                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
-                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
-                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
-                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                        ㈜에티버스 이피에이는 디바이스와 서비스를 통합 관리하는 솔루션 전문회사입니다.<br/>
+                        ICT 산업의 최신 동향에 대처하기 위하여 전문 인력과 함께 다양한 인프라와 서비스를<br/>
+                        구축하고 통합 관리하는 효과적인 방안을 제시하고 있습니다.<br/>
+                        또한 공공, 금융, 제조 등 다양한 분야에서 다년간 진행된 IT 컨설팅 산업의 축적된 경험을<br/>
+                        바탕으로 체계적이고 전략적인 해결 방법을 제시하여 고객사의 가치와 성공을 제고합니다.
                       </p>
+                      <div className='link_ou'>
+                        <Link to="https://www.eteversepa.com/main/main.html" target="_blank">
+                            <span>
+                              에티버스 이피에이 홈페이지
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -459,20 +514,31 @@ const Home = () => {
                   <img src={bg_es} alt="bg_es" />
                   <div>
                     <div>
-                      <img src={se4_lo1} alt="se4_lo1" />
+                      <img src={plus_btn} alt="plus_btn" className='plus_btn' />
+                      <img src={se4_lo5} alt="se4_lo1" />
                     </div>
                     <div>
                       <em>
-                        (주)에티버스
+                        (주)에티버스 이앤엘
                       </em>
                       <p>
-                        ㈜에티버스는 Total IT Solution을 지향하는 기업으로 고객 니즈를<br/>
-                        파악하여 디지털 트렌스포메이션 시대에 최적화된 솔루션을 제공합니다.<br/>
-                        또한 다각화된 사업 포트폴리오 구축과 안정적이고 효율적인 경영을<br/>
-                        기반으로 오랜 기간 동안 다양한 글로벌 벤더사와의 파트너쉽을 유지하고 있습니다.<br/>
-                        갈수록 복잡해지는 IT 환경 속에서도 항상 고객의 디지털 혁신을<br/>
-                        고민하고 고부가가치 기술분야를 꾸준히 개척해나가고 있습니다.
+                      (주)에티버스 이앤엘은 빠르게 변화하는 디지털 생태계의 최적화된 플랫폼에 맞춰<br/>
+                      이커머스 전략을 수립하여 고객 맞춤 제품을 제공하고 있습니다.<br/>
+                      풀필먼트 서비스를 통해 IT 관련 전문 물류에 대해 전략적 배송을 진행하고 있으며 고객과<br/>
+                      의 커뮤니케이션 활성화를 통한 고객 우선 서비스를 제공하고 있습니다.<br/>
+                      3PL 서비스를 통해 고객사의 물류진단 및 프로세스를 재설계하여 최적의 방안을 제시하고<br/>
+                      있으며 기존의 물류전문업체와 차별화된 한차원 높은 물류 종합 서비스를 제공합니다.
                       </p>
+                      <div className='link_ou'>
+                        <Link to="https://eteversenl.com/main/main.html" target="_blank">
+                            <span>
+                            에티버스 이앤엘
+                            </span>
+                            <span className="material-symbols-rounded">
+                                arrow_outward
+                            </span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -484,12 +484,9 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border: 1px solid red;
-  
       > div:nth-of-type(1) {
         width: 100%;
         height: 15%;
-        border: 1px solid red;
         display: flex;
         align-items: center;
         h3 {
@@ -501,7 +498,6 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
       > div:nth-of-type(2) {
         width: 100%;
         height: 80%;
-        border: 1px solid red;
   
         > ul {
           display: flex;
@@ -513,7 +509,6 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
   
           > li {
             flex: 1; /* 기본적으로 flex 1 */
-            border: 1px solid red;
             transition: flex 0.3s ease-in-out;
   
             > div {
@@ -542,12 +537,26 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
               > div{
                width: 80%; 
                height: 80%;
-               border: 1px solid red;
                z-index: 100;
                display: flex;
                flex-direction: column;
                justify-content: space-between;
-               > img{
+               position: relative;
+               .plus_btn{
+                position: absolute;
+                bottom: 10%;
+                width: 45px;
+                right: 0%;
+                filter:drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+                opacity: 1;
+                pointer-events: all;
+              }
+               & > div:nth-of-type(2){
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
+               }
+               > div > img{
                 transform: rotate(90deg);
                 transform-origin: bottom left;
                 width: 50%;
@@ -558,30 +567,76 @@ $text-shadow-medium: 2px 2px 2px rgba(0, 0, 0, 0.25);
                 color: #fff;
                 font-weight: bold;
                }
-               p{
+                p{
                 font-size: 0.9rem;
                 color: #fff;
                 margin: 3% 0;
                }
+               .link_ou{
+                display: flex;
+                a{ 
+                  display: flex;
+                  align-items: center;
+                  width: fit-content;
+                  padding: 15px 22px;
+                  border: 1px solid white;
+                  box-sizing: border-box;
+                  text-decoration: none;
+                  border-radius: 50px;
+                  transition: all 0.3s ease;
+                  margin-top: 15%;
+                  margin-right: 5%;
+                  span:nth-of-type(1){
+                    font-size: 0.9rem;
+                    color: white;
+                    margin-right: 5px;
+                  }
+                  span:nth-of-type(2){
+                    color: white;
+                  }
+                  &:hover{
+                    background-color: white;
+                    span{
+                      color: black;
+                    }
+                  }
+                 }
+               }
+               
               }
             }
           }
-  
+          
           /* 호버 효과 */
           li:hover {
-            flex: 3; /* 호버한 li 크기 증가 */
-            transition: all 0.3s ease;
+            flex: 10; /* 호버한 li 크기 증가 */
+            transition: all 0.3s ease; 
           }
-
+          li:hover > div > div > div:nth-of-type(2){
+            opacity: 1;
+            pointer-events: all;
+            
+          }
+          li:hover > div > img{
+            filter: brightness(0.5);
+          }
+          li:hover > div .plus_btn{
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+          }
+          
+          
           /* 호버 효과 */
-          li:hover > div > div > img {
+          li:hover > div > div > div > img {
             transform: rotate(0deg);
             transition: all 0.3s ease;
+            
           }
   
           /* 나머지 li 자동 조정 */
           ul:hover li:not(:hover) {
-            flex: 0.7; /* 다른 li들이 자동으로 줄어들어 간격 유지 */
+            flex: 0.5; /* 다른 li들이 자동으로 줄어들어 간격 유지 */
             transition: all 0.3s ease;
           }
         }

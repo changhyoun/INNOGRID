@@ -67,7 +67,9 @@ import se4_lo4 from "../assets/svgexport-13.svg"
 export {se4_lo4}
 import se4_lo5 from "../assets/svgexport-14.svg"
 export {se4_lo5}
-
+// 섹션4 플러스 버튼
+import plus_btn from "../assets/plus_btn.svg"
+export {plus_btn}
 
 
 
