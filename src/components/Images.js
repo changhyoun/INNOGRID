@@ -87,6 +87,36 @@ export {sc5_im4}
 import sc5_im5 from "../assets/sc5_im5.webp"
 export {sc5_im5}
 
+// 섹션6 블로그 img
+import sc6_im1 from "../assets/sc6_im1.webp";
+import sc6_im2 from "../assets/sc6_im2.webp";
+import sc6_im3 from "../assets/sc6_im3.webp";
+import sc6_im4 from "../assets/sc6_im4.webp";
+import sc6_im5 from "../assets/sc6_im5.webp";
+import sc6_im6 from "../assets/sc6_im6.webp";
+import sc6_im7 from "../assets/sc6_im7.webp";
+import sc6_im8 from "../assets/sc6_im8.webp";
+import sc6_im9 from "../assets/sc6_im9.webp";
+import sc6_im10 from "../assets/sc6_im10.webp";
+
+export { sc6_im1, sc6_im2, sc6_im3, sc6_im4, sc6_im5, sc6_im6, sc6_im7, sc6_im8, sc6_im9, sc6_im10 };
+
+import svgexport15 from "../assets/svgexport-15.svg";
+import svgexport16 from "../assets/svgexport-16.svg";
+import svgexport17 from "../assets/svgexport-17.svg";
+import svgexport18 from "../assets/svgexport-18.svg";
+import ft_logo1 from "../assets/svgexport-20.svg";
+import ft_logo2_1 from "../assets/svgexport-21.svg";
+import ft_logo2_2 from "../assets/svgexport-22.svg";
+import ft_logo2_3 from "../assets/svgexport-23.svg";
+import ft_logo2_4 from "../assets/svgexport-24.svg";
+import ft_logo2_5 from "../assets/svgexport-25.svg";
+import ft_blog from "../assets/svgexport-26.svg";
+import ft_fb from "../assets/svgexport-27.svg";
+
+export {svgexport15,svgexport16,svgexport17,svgexport18,ft_logo1,ft_logo2_1,ft_logo2_2,ft_logo2_3,ft_logo2_4,ft_logo2_5,ft_blog,ft_fb,};
+
+
 
 
 

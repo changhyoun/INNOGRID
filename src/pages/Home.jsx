@@ -1,10 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import './Home.scss';
 // FontAwesome 관련 import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, faArrowRight, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faArrowRight, faPlus, } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
-import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5,plus_btn,sc5_im1,sc5_im2,sc5_im3,sc5_im4,sc5_im5 } from '../components/Images';
+import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5,plus_btn,sc5_im1,sc5_im2,sc5_im3,sc5_im4,sc5_im5,sc6_im1, sc6_im2, sc6_im3, sc6_im4, sc6_im5, sc6_im6, sc6_im7, sc6_im8, sc6_im9, sc6_im10,svgexport15,svgexport16,svgexport17,svgexport18,ft_logo1,ft_logo2_1,ft_logo2_2,ft_logo2_3,ft_logo2_4,ft_logo2_5,ft_blog,ft_fb } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
@@ -19,9 +20,10 @@ const Home = () => {
   const [isPaused, setIsPaused] = useState(false); // 일시정지 상태 관리
   const [timeLeft, setTimeLeft] = useState(3); // 남은 시간
   const progressCircleRef = useRef(null); // progress circle 참조
-  const swiperRef1 = useRef(null); // Swiper 1 인스턴스 참조
-  const swiperRef3 = useRef(null); // Swiper 3 인스턴스 참조
-  const swiperRef5 = useRef(null); // Swiper 3 인스턴스 참조
+  const swiperRef1 = useRef(null); 
+  const swiperRef3 = useRef(null); 
+  const swiperRef5 = useRef(null);
+  const swiperRef6 = useRef(null); 
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const textRef1 = useRef(null);
@@ -64,6 +66,18 @@ const Home = () => {
       },
     });
     swiperRef5.current = new window.Swiper(".swiper-container5", {
+      loop: true, // 무한 루프
+      speed: 5000, // 부드러운 흐름
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false, // 사용자 상호작용 후에도 계속 작동
+      },
+      slidesPerView: "auto", // 여러 개의 div 표시
+      spaceBetween: 20, // 간격 20px
+      freeMode: true, // 자연스럽게 움직임
+    });
+
+    swiperRef6.current = new window.Swiper(".swiper-container6", {
       loop: true, // 무한 루프
       speed: 5000, // 부드러운 흐름
       autoplay: {
@@ -135,8 +149,27 @@ const Home = () => {
     { img: sc5_im3, title: "롯데케미칼",desc: "롯데케미칼 공식 웹사이트 인프라 환경의 퍼블릭 클라우드 전환", extra: "롯데케미칼의 공식 웹 사이트를 기존 레거시 환경에서\n퍼블릭 클라우드인 AWS 환경으로 전환함으로써\n최적의 비용으로 서비스를 유지 관리하고,\n사용자 급증 등 상황에 유연하게 대처할 수 있는\n운영환경을 구축하였습니다." },
     { img: sc5_im4, title: "대구미래교육연구원", desc: "물리 인프라 환경 클라우드 기반 통합 시스템 전환", extra: "대구교육정보서비스 고도화 사업의 일환으로서\n기존 물리 인프라 환경을 클라우드 기반의 통합 시스템으로\n전환함에 따라, 구축된 클라우드 환경에 대한 원포인트 클라우드\n관리체계를 수립하고 민첩한 대응력 확보를 위한\n클라우드 통합운영 환경을 구축하였습니다." },
     { img: sc5_im5, title: "한국교육학술정보원(KERIS)", desc: "교육환경 개선을 위한 지능형 클라우드 인프라 구축", extra: "새로운 교육정책 및 디지털 정부혁신을 지원하는 4세대 지능형\n나이스 구축 사업으로 1단계, 2단계, 3단계 사업으로\n진행하였으며, 지능형 클라우드 인프라 구축을 통해\n학생과 학부모가 참여하는 교육환경 실현을 위한\n클라우드 S/W 제공합니다." },
-   
   ];
+
+  const slidesData2 = [
+    { img: sc6_im1, title: "Inno News", desc: "이노그리드, <서울신문 상생협력 건설 엑스포>에서 스마트건설 위한 옵저버빌리티 서비스 선보여", date: "2025-02-26", lk : 'https://blog.naver.com/innogrid/223774463752' },
+    { img: sc6_im2, title: "Inno News", desc: "이노그리드, 전북은행 수주하며 금융권 디지털 전환 클라우드 파트너로 입지 굳혀", date: "2025-02-24", lk : 'https://blog.naver.com/innogrid/223771385408' },
+    { img: sc6_im3, title: "Inno News",desc: "이노그리드-비즈플레이, SaaS 디지털 전환 위한 업무협약 체결", date: "2025-02-20", lk : 'https://blog.naver.com/innogrid/223766975182' },
+    { img: sc6_im4, title: "Inno News", desc: "“하이브리드 클라우드 비즈니스 공동 추진” 이노그리드-이테크시스템-ISTN 3사, MOU 체결", extra: "2025-02-19", lk : 'https://blog.naver.com/innogrid/223765843096' },
+    { img: sc6_im5, title: "Inno News", desc: "이노그리드, 2025 한국로봇종합학술대회 참가", date: "2025-02-18", lk : 'https://blog.naver.com/innogrid/223764510145' },
+    { img: sc6_im6, title: "Inno News", desc: "이노그리드, ‘오라클 클라우드 서밋 2025’ 참가", date: "2025-02-12", lk : 'https://blog.naver.com/innogrid/223757675773' },
+    { img: sc6_im7, title: "Inno News", desc: "이노그리드, 클라우드 기술 리딩을 통한 구축 솔루션 선도 기업 5개년 청사진 제시", date: "2025-02-10", lk : 'https://blog.naver.com/innogrid/223755014511' },
+    { img: sc6_im8, title: "IT Trends",desc: "과학기술정보통신부, <2024년 클라우드 산업 실태조사> 발표...국내 클라우드 산업 7조 4천억 원 규모", date: "2025-02-07", lk : 'https://blog.naver.com/innogrid/223751021546' },
+    { img: sc6_im9, title: "Inno Culture", desc: "이노그리드, 2025년 사내 캐치프레이즈 공모전 개최", date: "2025-02-03", lk : 'https://blog.naver.com/innogrid/223745946888' },
+    { img: sc6_im10, title: "Inno Culture", desc: "하이브리드 클라우드 인턴십 프로그램 종료_클라우드 옵스팀", date: "2025-01-31", lk : 'https://blog.naver.com/innogrid/223742953653' },
+  ];
+
+  const t_footer_bxs = [
+    { lk :'https://www.innogrid.com/contact/directions' , ic : svgexport15, tx1 : "오시는 길", tx2 : "이노그리드에 오시는 길을\n안내해 드립니다."},
+    { lk :'https://www.innogrid.com/contact/reference' , ic : svgexport16, tx1 : "자료실", tx2 : "이노그리드의 다양한\n소개 자료를 신청해 보세요."},
+    { lk :'https://www.innogrid.com/contact/contact' , ic : svgexport17, tx1 : "문의하기", tx2 : "도움이 필요하신가요?\n솔루션 제품 문의를 해보세요."},
+    { lk :'https://www.innogrid.com/contact/cooperation' , ic : svgexport18, tx1 : "구매 협력사 등록", tx2 : "구매 협력사 등록 시 안정적인\n구매/입찰 참여가 가능합니다."}
+  ]
 
   // 재생/정지 버튼 클릭 핸들러
   const handlePlayPause = () => {
@@ -477,7 +510,6 @@ const Home = () => {
                       다양한 Usage를 파악하고 그에 적합한 솔루션을 제공합니다.<br/>
                       끊임없는 기술 혁신으로 에티버스 이비티의 사업구조를 더욱 고도화하고<br/>
                       이를 통해 경쟁력을 확보하고 있으며 고객 중심의 비즈니스를 통해 IT 솔루션 기업으로 도약하고자 합니다.<br/><br/>
-
                       ㈜에티버스 이비티에서는 PC, 주변기기 및 전자제품, 클라우드 서비스 등 디지털 제품을<br/>
                       합리적인 가격으로 공급하는 온라인쇼핑몰 시소몰도 운영하고 있습니다.
                       </p>
@@ -612,6 +644,122 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="section" id="sc6">
+        <div className="sc6_warp">
+          <div className="sc6_t">
+            <h3>BLOG</h3>
+            <Link to={"https://www.innogrid.com/pr/blog"} target='_blank'>
+              더 보기
+              <FontAwesomeIcon icon={faArrowRight} /> 
+            </Link>
+          </div>
+          <div className="sc6_bt">
+            <div className="swiper-container swiper-container6">
+              <div className="swiper-wrapper swiper-wrapper6">
+                {slidesData2.map((slide, index) => (
+                  <div key={index} className="swiper-slide swiper-slide6 slide-item6">
+                   <Link to={slide.lk} target='_blank'>
+                    <div>
+                      <img src={slide.img} alt={`Slide ${index + 1}`} />
+                    </div>
+                    <div>
+                      <div className="text-content">
+                        <div className="text-content_t">
+                          <em>{slide.title}</em>
+                          <p>{slide.desc}</p>
+                        </div>
+                        <div className="text-content_bt">
+                          <span>
+                            {slide.date}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                   </Link>
+                 </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="section" id="sc7">
+        <div className="sc7_warp">
+          {t_footer_bxs.map(( item, index) => (
+                  <Link to={item.lk} target='_blank' key={index} className="t_footer">
+                    <div className='t_footer_inner'>
+                      <div className='t_footer_inner_lt'>
+                        <h3>{item.tx1}</h3>
+                        <p>
+                          {item.tx2.split("\n").map((line, index) => (
+                            <React.Fragment key={index}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}
+                        </p>
+                      </div>
+
+                      <div className='t_footer_inner_rt'>
+                        <img src={item.ic} alt="item.ic" />
+                      </div>
+                    </div>
+                  </Link>
+          ))}
+        </div>
+      </div>
+      <footer className="ft">
+        <div className="ft_inner">
+          <div className="ft_lt">
+            <div className="ft_lt_t">
+              <div>
+                <img src={ft_logo1} alt="ft_logo1" />
+              </div>
+              <div>
+                <Link to={"https://etevers.com/main/main.html"} target='_blank'>
+                  <img src={ft_logo2_1} alt="ft_logo2_1" />
+                </Link>
+                <Link to={"https://etechsystem.co.kr/main/main.html"} target='_blank'>
+                  <img src={ft_logo2_2} alt="ft_logo2_2" />
+                </Link>
+                <Link to={"https://eteversebt.com/main/main.html"} target='_blank'>
+                  <img src={ft_logo2_3} alt="ft_logo2_3" />
+                </Link>
+                <Link to={"https://www.eteversepa.com/main/main.html"} target='_blank'>
+                  <img src={ft_logo2_4} alt="ft_logo2_4" />
+                </Link>
+                <Link to={"https://eteversenl.com/main/main.html"} target='_blank'>
+                  <img src={ft_logo2_5} alt="ft_logo2_5" />
+                </Link>
+              </div>
+            </div>
+            <div className="ft_lt_bt">
+              <div>
+                <em>
+                  <b>(우) 04551 서울특별시 중구 을지로 100 파인에비뉴 B동 10층 (을지로2가 203)</b><br/>
+                  대표전화 02. 516. 5990 | FAX 02. 516. 5997
+                </em>
+              </div>
+              <br/>
+              <div>
+                <em>
+                  <b>하이퍼스퀘어</b> (우) 04551 서울특별시 중구 을지로 100 파인에비뉴 B동 5층 (을지로2가 203)<br/>
+                </em>
+                <em>
+                  <b>중부지사</b> (우) 34091 대전광역시 유성구 노은동로75번길 85-30 (노은동 549-5)
+                </em>
+              </div>
+              
+            </div>
+          </div>
+          <div className="ft_rt">
+            <div className="ft_rt_t">
+            </div>
+            <div className="ft_rt_bt">
+            </div>
+          </div>
+        </div>
+      </footer>
       
     </div>
   );
