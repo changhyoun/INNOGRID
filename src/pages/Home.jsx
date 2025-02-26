@@ -3,7 +3,7 @@ import React from 'react';
 import './Home.scss';
 // FontAwesome 관련 import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, faArrowRight, faPlus, } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faArrowRight, faPlus, faChevronUp, faChevronDown, faArrowUp, } from '@fortawesome/free-solid-svg-icons';
 import Sc1_slideS from '../components/Sc1_slideS';
 import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_box3,se2_bt_box5,se3_vi,bg_ev,bg_eb,bg_ee,bg_ep,bg_es,se4_lo1,se4_lo2,se4_lo3,se4_lo4,se4_lo5,plus_btn,sc5_im1,sc5_im2,sc5_im3,sc5_im4,sc5_im5,sc6_im1, sc6_im2, sc6_im3, sc6_im4, sc6_im5, sc6_im6, sc6_im7, sc6_im8, sc6_im9, sc6_im10,svgexport15,svgexport16,svgexport17,svgexport18,ft_logo1,ft_logo2_1,ft_logo2_2,ft_logo2_3,ft_logo2_4,ft_logo2_5,ft_blog,ft_fb } from '../components/Images';
 import Sc1_slide4 from '../components/Sc1_slide4';
@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
+
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -29,6 +30,19 @@ const Home = () => {
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
   const textRef3 = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // 드롭다운 상태 관리
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 부드러운 스크롤 적용
+    });
+  };
+  
   
 
   useEffect(() => {
@@ -754,8 +768,77 @@ const Home = () => {
           </div>
           <div className="ft_rt">
             <div className="ft_rt_t">
+              <div>              
+                <Link to={"https://blog.naver.com/innogrid"} target='_blank'>
+                  <img src={ft_blog} alt="ft_blog" />
+                </Link>
+                <Link to={"https://www.facebook.com/inno5990/"} target='_blank'>
+                  <img src={ft_fb} alt="ft_fb" />
+                </Link>
+              </div>
+              <div>
+              <button onClick={toggleDropdown}>
+                <p>관련 사이트</p>
+                <FontAwesomeIcon icon={isDropdownOpen ?  faChevronDown : faChevronUp} />
+              </button>
+              {isDropdownOpen && ( // isDropdownOpen이 true일 때만 ul 표시
+                <ul className={`dropdown-menu ${isDropdownOpen ? "open" : "closed"}`}>
+                  <li>
+                    <Link to={"https://etevers.com/main/main.html"} target="_blank">
+                      ETEVERS Group
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://eteversebt.com/main/main.html"} target="_blank">
+                      ETEVERS SYSTEM
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://eteversenl.com/main/main.html"} target="_blank">
+                      ETEVERS eBT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://www.eteversepa.com/main/main.html"} target="_blank">
+                      ETEVERS ePA
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://etechsystem.co.kr/main/main.html"} target="_blank">
+                      ETEVERS E&L
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://www.innogrid.com/hypersquare/edusquare"} target="_blank">
+                      Edu Square
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://www.innogrid.com"} target="_blank">
+                      Zero Square Portal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"https://www.bxd.com"} target="_blank">
+                      BXD Portfolio
+                    </Link>
+                  </li>
+                  
+                </ul>
+              )}
+            
+              </div>
+              <div onClick={scrollToTop}>
+                <button>
+                  <p>TOP</p>
+                  <FontAwesomeIcon icon={faArrowUp} /> 
+                </button>
+                
+              </div>
             </div>
             <div className="ft_rt_bt">
+              <em>대표이사 김명진 | 사업자등록번호 220-87-36743<br/>통신판매업신고 제 2012-서울강남-00571호 <Link to={'https://www.innogrid.com/privacy'} target='_blank'>개인정보처리방침</Link><br/></em>
+              <em>COPYRIGHT©Inoogrid. All right reserved</em>
             </div>
           </div>
         </div>
