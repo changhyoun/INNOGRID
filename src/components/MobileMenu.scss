@@ -1,0 +1,120 @@
+$background-color: #111;
+$text-color: #fff;
+
+.mobile-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: $background-color !important;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal !important;
+  .mobile-menu_t{
+    width: 100% !important;
+    height: 60px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    position: fixed;
+    z-index: 100;
+    background: $background-color !important;
+    top: 0;
+    left: 0;
+    img{
+        height: 40% !important;
+        margin-left: 5%;
+    }
+    
+      
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: $text-color;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: #2a2a2a;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        margin-right: 5%;
+        &:hover{
+            background-color: #0042ff;
+        }
+      }
+  }
+  
+
+  .menu {
+    text-align: left;
+    width: 90%;
+    margin-top: 60px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 10px 0;
+
+        .menu-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $text-color;
+          font-size: 1.3rem;
+          cursor: pointer;
+          padding: 20px 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+          svg {
+            font-size: 1.3rem;
+          }
+        }
+
+        .submenu {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.3s ease-in-out;
+
+          &.open {
+            height: auto;
+            padding: 10px 0;
+          }
+
+          li {
+            padding-left: 15px;
+
+            a {
+              color: #ddd;
+              text-decoration: none;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu_bt{
+    width: 90% !important;
+    height: 60px !important;
+    display: flex !important;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 20px 15px;
+    a{
+        color: $text-color;
+        margin-right: 20px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+  }
+}

@@ -1,6 +1,10 @@
 // 로고
 import logo from "../assets/logo_b.svg"
 export {logo}
+
+import logo_w from "../assets/logo_w.svg"
+export {logo_w}
+
 // 섹션1 스와이퍼 이미지1
 import se1_sw_img1 from "../assets/se1_sw_img1.webp"
 export {se1_sw_img1}

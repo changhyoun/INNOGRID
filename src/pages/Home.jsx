@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import React from 'react';
 import './Home.scss';
+import '../components/Responsive.scss'
 // FontAwesome 관련 import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faArrowRight, faPlus, faChevronUp, faChevronDown, faArrowUp, } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +10,12 @@ import { hypersquare, se1_sw_img1, se1_sw_img2, se2_bt_box1,se2_bt_box2,se2_bt_b
 import Sc1_slide4 from '../components/Sc1_slide4';
 import Sc1_slide5 from '../components/Sc1_slide5';
 import Sc2_slide_box from '../components/Sc2_slide_box';
+// import MobileMenu from '../components/MobileMenu';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
+
 
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
@@ -197,6 +200,7 @@ const Home = () => {
 
   return (
     <div id="Home" className="fullpage">
+      {/* <MobileMenu/> */}
       {/* Section 1 */}
       <div className="section" id="sc1">
         <div className="swiper-container1">
@@ -815,7 +819,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link to={"https://www.innogrid.com"} target="_blank">
-                      Zero Square Portal
+                      Zero Square<br/>Portal
                     </Link>
                   </li>
                   <li>

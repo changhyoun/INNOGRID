@@ -1,0 +1,235 @@
+// 노트북 1.25배
+@media (max-width: 1600px) {
+    // sc1
+    .Sc1_slide4 > div{
+        height: 90% !important;
+    }
+    // sc2
+    #sc2 > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1),
+    #Home #sc2 > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(1){
+        gap: 0px !important;
+    }
+
+
+    #Home #sc2 > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) a,
+    #Home #sc2 > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(2) a,
+    #Home #sc2 > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) a{
+        padding: 10px 25px;
+        margin-top: 10px;
+    }
+
+    // sc3
+    #Home #sc3 > div h2{
+        font-size: 3.5rem;
+    }
+    #Home #sc3 > div p{
+        font-size: 2rem;
+    }
+    // sc4
+    #Home #sc4 > div > div:nth-of-type(1) h3{
+        font-size: 2rem;
+    }
+    #Home #sc4 > div > div:nth-of-type(2) > ul > li > div > div .link_ou a{
+        margin-top: 0%;
+    }
+    // sc5
+    #Home #sc5 > div > div:nth-of-type(1) h3{
+        font-size: 2rem;
+    }
+    #Home #sc5 > div > div:nth-of-type(2) .text-content > span{
+        font-size: 0.65rem;
+        white-space: normal;
+    }
+    #Home #sc5 > div > div:nth-of-type(1) a {
+        justify-content: space-around;
+        padding: 5px 11px;
+    }
+    // sc5
+    #Home #sc6 > div > div:nth-of-type(1) h3{
+        font-size: 2rem;
+    }
+    #Home #sc6 > div > div:nth-of-type(1) a{
+        justify-content: space-around;
+        padding: 5px 11px;
+    }
+    #Home #sc6 > div > div:nth-of-type(2) .swiper-container6 .swiper-wrapper6 .slide-item6 a > div:nth-of-type(2) div {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    // sc7
+    #Home #sc7 > div a > div div:nth-of-type(1) h3{
+        font-size: 1.5rem;
+    }
+    #Home #sc7 > div a > div div:nth-of-type(1) p{
+        font-size: 0.9rem;
+    }
+    #Home #sc7 > div a > div div:nth-of-type(2) img{
+        height: 60px;
+    }
+
+}
+
+    // 아이패드 미니 및 아이폰 14 가로
+    @media only screen and (max-width: 1100px) and (orientation: landscape) {
+        // 헤더
+        .desktop-menu{
+            display: none !important;
+        }
+        .hamburger-icon{
+            display: block !important;
+        }
+        #Header > div > div:nth-of-type(1) img{
+            height: 40%;
+        }
+        .Menu ul li a{
+            font-size: 0.9rem;
+        }
+        #Header > div > div:nth-of-type(2){
+            display: none;
+            
+        }
+        #Header > div > div:nth-of-type(3){
+            width: 20%;
+            justify-content: end;
+            > .hamburger-icon{
+                margin-right: 35px;
+            }
+        }
+        // sc1
+        .Sc1_slideS > div{
+            small{
+                font-size: 1rem !important;
+            }
+            h2{
+                font-size: 2rem !important;
+            }
+            p{
+                font-size: 1.2rem !important;
+            }
+            a{
+                font-size: 1.2rem !important;
+                padding: 10px 30px !important;
+                transition: all 0.5 ease;
+            }
+        }
+        .Sc1_slide5 {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+        .Sc1_slide5 > div:nth-of-type(1) {
+            height: calc(75% - 40px) !important;
+            width: 100% !important;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+            .swiper-container2 .swiper-wrapper .swiper-slide > div h2{
+                font-size: 2rem !important;
+            }
+            .swiper-container2 .swiper-wrapper .swiper-slide > div p{
+                font-size: 1.2rem !important;
+            }
+            .swiper-container2 .swiper-wrapper .swiper-slide > div a {
+                font-size: 1rem !important;
+                padding: 10px 20px !important;
+            }
+        }
+
+        .Sc1_slide5 > div:nth-of-type(2) {
+            width: 100% !important;
+            height: 25% !important;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+            position: relative;
+            border-radius: 30px;
+            div{
+                width: 90% !important;
+                height: 90% !important;
+                display: flex;
+                flex-direction: row !important;
+                align-items: center;
+                margin-bottom: 0% !important;
+                justify-content: space-evenly !important;
+                h2{
+                    font-size: 1.4rem !important;
+                    text-align: center;
+                }
+                p{
+                    font-size: 1rem !important;
+                    text-align: center;
+                }
+                a {
+                    font-size: 1rem;
+                    padding: 15px 20px !important;
+                }
+            }
+        }
+        .Sc1_slide4{
+            display: flex;
+            flex-direction: column;
+            > div {
+                width: 100% !important;
+                height: 24% !important;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+                > div{
+                    display: flex;
+                    flex-direction: column !important;
+                    flex-wrap: wrap;
+                    
+                    width: 90% !important;
+                    height: 90% !important;
+                    img{
+                        width:  auto !important;
+                        height: 80%;
+                        aspect-ratio: 1;
+                        object-fit: contain ;
+                    }
+                    a{
+                        transform: translate(0px, 0px) !important;
+                        opacity: 1 !important;
+                        padding: 10px 25px !important;
+                    }
+                }
+            }
+            
+        }
+        // sc2
+        #Home #sc2 > div:nth-of-type(1) > div > div:nth-of-type(2) {
+            width: 20% !important;
+            a{
+                font-size: 1rem !important;
+            }
+        }
+        
+
+        .Sc2_slide_box{
+            small{
+                font-size: 1rem !important;
+            }
+            h3{
+                font-size: 1.3rem !important;
+            }
+            p{
+                font-size: 1.1rem !important;
+            }
+        } 
+    
+    }
+
+
