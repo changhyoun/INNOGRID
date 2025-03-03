@@ -1,8 +1,22 @@
-# React + Vite
+# INNOGRID
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 1. 프로젝트 개요
+- **프로젝트 이름:** INNOGRID
+- **목표:** INNOGRID 홈페이지 클론 코딩
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 2. etc
+- **플랫폼:** PC, 모바일 웹
+- **사용 기술:** html,scss,js,react
+- **개발 인원:** front end 1명
+
+---
+
+## 5. 설명
+- **설명:** 해당 프로젝트는 기존 이노그리드(INNOGRID)<br/>
+    홈페이지를 클론 코딩하여, 반응형 웹 디자인을 적용하여<br/>
+    다양한 화면 크기에서도 잘 동작하도록 구현했습니다.
+
