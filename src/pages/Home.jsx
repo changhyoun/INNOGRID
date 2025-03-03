@@ -814,7 +814,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link to={"https://www.innogrid.com/hypersquare/edusquare"} target="_blank">
-                      Edu Square
+                      EDU Square
                     </Link>
                   </li>
                   <li>
